@@ -1,0 +1,48 @@
+using System;
+using MySql.Data.MySqlClient;
+
+namespace Desafio06
+{
+    public class Program
+    {
+        MySqlConnection Conexao;
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Executando Desafio__06");
+            string Pedro;
+            int n1 = 23;
+            int n2 = 7;
+
+
+            Console.WriteLine("Pedro");
+
+            Console.WriteLine("Idade :" + n1);
+
+            Console.WriteLine("Nota : " + n2);
+
+            Console.ReadLine();
+
+
+            //String de conexão
+            string conexao = @"Data Source=localhost\sqlexpress;
+             Initial Catalog=DBProdutos;
+                       Integrated Security=true";
+            string data_source = "datasource=localhost;username=root;password=214100906";
+            //Conexão
+            var cn = new System.Data.SqlClient.SqlConnection();
+            cn.ConnectionString = conexao;
+            //Conectar
+            cn.Open();
+            //Fechar a conexão
+            cn.Close();
+
+
+
+
+        }
+
+    }
+
+
+}
+
